@@ -7,3 +7,5 @@ add_library( hello libHelloSLAM.cpp )
 add_library( hello_shared SHARED libHelloSLAM.cpp)
 target_link_libraries( useHello hello_shared )
 target_link_libraries( useHello2 hello)
+
+set(CMAKE_BUILD_TYPE Debug)
