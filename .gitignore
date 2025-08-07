@@ -37,3 +37,6 @@
 
 # vscode
 *.vscode
+
+# ppt partial files
+*.~lock*
