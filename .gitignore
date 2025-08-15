@@ -34,3 +34,9 @@
 *cmake-build-*
 *.idea
 **build**
+
+# vscode
+*.vscode
+
+# ppt partial files
+*.~lock*
