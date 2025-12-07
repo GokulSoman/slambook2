@@ -59,6 +59,32 @@ int main(int argc, char **argv){
 
     cout << "Time Used " << time_used.count()*1000 << " milli seconds." << endl;
 
+    // Copying images
+    // Copying only be referencing
+
+    cv::Mat another_image =  image;
+
+    // Make a rect in another image. This will get reflacted in orig image
+
+    cout << "- Creating changes in a copy of image shows up in original image" << endl;
+    another_image(cv::Rect(0,0,100,100)).setTo(0); // set this pixel range to 0
+
+    cv::imshow("Original image", image);
+
+    cv::waitKey(0);
+
+    cv::Mat image_clone = image.clone();
+
+    image_clone(cv::Rect(100,0,120,120)).setTo(255);
+
+    cout << "An image clone does not translate changes to origingal image" << endl;
+
+    cout << "- Creating a white box in clone image" << endl;
+
+    cv::imshow("Image clone", image_clone);
+    cv::waitKey(0);
+
+    cv::destroyAllWindows();
     return 0;
 
     
