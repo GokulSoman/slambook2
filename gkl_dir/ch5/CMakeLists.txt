@@ -10,9 +10,9 @@ find_package( Pangolin )
 include_directories( ${Pangolin_INCLUDE_DIRS} )
 
 # # Link Pangolin library for trajectoryTrack
-target_link_libraries(trajectoryTrack
-    ${Pangolin_LIBRARIES}
-)
+# target_link_libraries(trajectoryTrack
+    # ${Pangolin_LIBRARIES}
+# )
 
 # add opencv
 find_package(OpenCV REQUIRED)
@@ -33,3 +33,4 @@ target_link_libraries( undistortImage ${OpenCV_LIBS} )
 add_executable( stereoVision stereoVision.cpp)
 
 target_link_libraries( stereoVision ${OpenCV_LIBS} )
+target_link_libraries(stereoVision ${Pangolin_LIBRARIES})
