@@ -4,12 +4,17 @@
 #include <Eigen/Dense>
 #include <string>
 #include <vector>
+#include <pangolin/pangolin.h>
 
 using namespace std;
 using namespace Eigen;
 
 string left_image = "../left.png";
 string right_image = "../right.png";
+
+void showPointCloud(
+    const vector<Vector4d, Eigen::aligned_allocator<Vector4d>> &pointcloud
+);
 
 int main(int argc, char **argv){
 
@@ -70,4 +75,9 @@ int main(int argc, char **argv){
 
 
 
+}
+
+void showPointCloud(const vector<Vector4d, Eigen::aligned_allocator<Vector4d>> &pointcloud){
+
+    if (pointcloud.empty())
 }
