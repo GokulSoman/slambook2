@@ -61,7 +61,7 @@ int main(int argc, char **argv){
 
             point[0] = x * depth;
             point[1] = y * depth;
-            point[3] = depth;
+            point[2] = depth;
 
             pointcloud.push_back(point);
         }
