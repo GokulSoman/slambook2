@@ -19,7 +19,7 @@ find_package(OpenCV REQUIRED)
 set(Sophus_DIR "/usr/local/share/sophus/cmake")
 find_package(Sophus REQUIRED)
 
-find_package((Pangolin REQUIRED))
+find_package(Pangolin REQUIRED)
 #link libraries
 
 include_directories( ${OpenCV_INCLUDE_DIRS})
